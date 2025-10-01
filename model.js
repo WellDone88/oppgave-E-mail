@@ -12,7 +12,7 @@ const model = {
 
     },
 
-  
+  //data
     EmailAndPasswords:[
         {email:'admin@gmail.com', password:'password'},
         {email:'martin@gmail.com', password:'TikaMasala4life'},
