@@ -1,7 +1,7 @@
 
 function updateview(){
     let HTML = document.getElementById("app").innerHTML = /*HTML*/ `
-    <h1>Panda express</h1>
+    <h1>Panda express <span><img id="pandaLogo" src="pandaLogo.png"></span></h1>
     <input type="email" onchange=""> e-post <br>
     <input type="password" onchange=""> passord<br>
     <br>
