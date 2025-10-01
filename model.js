@@ -1,7 +1,6 @@
 const model = {
     app:{
         currentPage: 'homePage',
-        LogInPage: 'welcomePage',
 
     },
 
@@ -15,8 +14,8 @@ const model = {
   //data
     EmailAndPasswords:[
         {email:'admin@gmail.com', password:'password'},
-        {email:'martin@gmail.com', password:'TikaMasala4life'},
-        {email:'rebecka@mail.com', password:'Skyrim123'}
+        {email:'martin@gmail.com', password:'tikaMasala4life'},
+        {email:'rebecka@mail.com', password:'skyrim123'}
 
     ],
 
