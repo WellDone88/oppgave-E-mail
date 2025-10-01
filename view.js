@@ -5,7 +5,7 @@ function updateview(){
     <input type="email"> epost <br>
     <input type="password"> passord<br>
     <br>
-    <button>Log inn</button>
+    <button>Log in</button>
     
     
     

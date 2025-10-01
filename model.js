@@ -9,6 +9,8 @@ const model = {
     },
 
     data:{
+        SavedLogInData: 
+        ['admin','password']
 
     },
 
