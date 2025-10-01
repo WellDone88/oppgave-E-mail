@@ -1,20 +1,24 @@
 const model = {
     app:{
         currentPage: 'homePage',
+        LogInPage: 'welcomePage',
 
     },
 
     viewState: {
+        email: '',
+        password: '',
+
 
     },
 
-    data:{
-        EmailAndPasswords: 
-        ['admin@gmail.com','password']
-        ['martin@gmail.com', 'TikaMasala4life']
-        ['rebecka@mail.com', 'Skyrim123']
-        
-    },
+  
+    EmailAndPasswords:[
+        {email:'admin@gmail.com', password:'password'},
+        {email:'martin@gmail.com', password:'TikaMasala4life'},
+        {email:'rebecka@mail.com', password:'Skyrim123'}
+
+    ],
 
 
 
@@ -24,4 +28,4 @@ const model = {
 
 
 
-}
+};
