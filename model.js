@@ -4,21 +4,22 @@ const model = {
 
     },
 
-    viewState: {
+    viewState:
+    {
+        name: '',
         email: '',
         password: '',
 
-
     },
-
-  //data
+    
+    data:{
     EmailAndPasswords:[
         {email:'admin@gmail.com', password:'password'},
         {email:'martin@gmail.com', password:'tikaMasala4life'},
-        {email:'rebecka@mail.com', password:'skyrim123'}
+        {email:'rebecka@mail.com', password:'skyrim123'},
 
     ],
-
+    }
 
 
 
