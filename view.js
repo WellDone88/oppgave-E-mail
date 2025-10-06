@@ -34,6 +34,14 @@ function updateView() {
         <div id="centerMydiv">
             <h1>Opprett ny bruker <span><img id="pandaLogo" src="pandaLogo.png"></span></h1>
             <label>
+             Name:
+                <input type="text" 
+                    oninput="model.viewState.name=this.value" 
+                    value="${model.viewState.name}" 
+                    placeholder="Navn">
+            </label>
+            <br><br>
+            <label>
                 E-post:
                 <input type="email" 
                     oninput="model.viewState.email=this.value" 
@@ -59,7 +67,7 @@ function updateView() {
     else if (currentPage === 'welcomePage') {
         appDiv.innerHTML = /*HTML*/ `
         <div id="centerMydiv">
-            <h1>Velkommen, ${model.viewState.email}!</h1>
+            <h1>Velkommen, ${model.viewState.name}!</h1>
             <button onclick="logout()">Logg ut</button>
         </div>
         `;

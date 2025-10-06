@@ -6,6 +6,7 @@ function checkMailAndPassword() {
     const user = model.data.EmailAndPasswords.find(u => u.email === email && u.password === password);
 
     if (user) {
+        model.viewState.name = user.name;
         model.app.currentPage = 'welcomePage';
         updateView();
     } else {
@@ -14,6 +15,7 @@ function checkMailAndPassword() {
 }
 
 function goToRegister() {
+    model.viewState.name = '';
     model.viewState.email = '';
     model.viewState.password = '';
     model.app.currentPage = 'registerPage';
@@ -28,6 +30,7 @@ function goHome() {
 }
 
 function registerUser() {
+    const name = model.viewState.name.trim();
     const email = model.viewState.email.trim();
     const password = model.viewState.password.trim();
     const messageDiv = document.getElementById('Wrong');
@@ -43,14 +46,16 @@ function registerUser() {
         return;
     }
 
-    model.data.EmailAndPasswords.push({ email, password });
+    model.data.EmailAndPasswords.push({ name, email, password });
     messageDiv.innerText = "Bruker opprettet! Du kan nå logge inn.";
+    model.viewState.name = '';
     model.viewState.email = '';
     model.viewState.password = '';
 }
 
 function logout() {
     model.app.currentPage = 'homePage';
+    model.viewState.name = '';
     model.viewState.email = '';
     model.viewState.password = '';
     updateView();
