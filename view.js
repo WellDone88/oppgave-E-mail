@@ -13,7 +13,7 @@ function updateView() {
                     value="${model.viewState.email}" 
                     placeholder="epost adresse">
             </label>
-            <br><br>
+            <br>
             <label>
                 Passord:
                 <input type="password" 
@@ -21,7 +21,7 @@ function updateView() {
                     value="${model.viewState.password}" 
                     placeholder="passord">
             </label>
-            <br><br>
+            <br>
             <button onclick="checkMailAndPassword()">Log in</button>
             <button onclick="goToRegister()">Opprett bruker</button>
             <h2 id="Wrong"></h2>
