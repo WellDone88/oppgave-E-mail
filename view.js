@@ -7,7 +7,7 @@ function updateView() {
         <div id="centerMydiv">
             <h1>Panda Express <span><img id="pandaLogo" src="pandaLogo.png"></span></h1>
             <label>
-                E-post:
+                E-post:<br>
                 <input type="email" 
                     oninput="model.viewState.email=this.value" 
                     value="${model.viewState.email}" 
@@ -15,15 +15,15 @@ function updateView() {
             </label>
             <br>
             <label>
-                Passord:
+                Passord:<br>
                 <input type="password" 
                     oninput="model.viewState.password=this.value" 
                     value="${model.viewState.password}" 
                     placeholder="passord">
             </label>
             <br>
-            <button onclick="checkMailAndPassword()">Log in</button>
-            <button onclick="goToRegister()">Opprett bruker</button>
+            <button onclick="checkMailAndPassword()">Log inn</button>
+            <button onclick="goToRegister()">Opprett bruker</button><br>
             <h2 id="Wrong"></h2>
         </div>
         `;
@@ -74,5 +74,4 @@ function updateView() {
     }
 }
 
-// Start appen når siden lastes
 window.onload = () => updateView();
