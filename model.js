@@ -14,9 +14,9 @@ const model = {
     
     data:{
     EmailAndPasswords:[
-        {email:'admin@gmail.com', password:'password'},
-        {email:'martin@gmail.com', password:'tikaMasala4life'},
-        {email:'rebecka@mail.com', password:'skyrim123'},
+        {name: 'Admin', email:'admin@gmail.com', password:'password'},
+        {name: 'Martin', email: 'martin@gmail.com', password:'tikaMasala4life'},
+        {name: 'Rebecka', email:'rebecka@mail.com', password:'skyrim123'},
 
     ],
     }
@@ -29,3 +29,5 @@ const model = {
 
 
 };
+
+window.onload = () => updateView();
