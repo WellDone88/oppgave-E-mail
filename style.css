@@ -4,8 +4,9 @@
 }
 
 #centerMydiv{
-    display: grid;
-    width: fit-content;
-    max-width:100%;
-    min-width: 10px;
+    display: flex;
+    flex-direction: column;
+    max-width: fit-content;
+    min-width:fit-content; 
 }
+   

@@ -9,7 +9,7 @@ function updateView() {
             <label>
                 E-post:<br>
                 <input type="email" 
-                    oninput="model.viewState.email=this.value" 
+                    onchange="SaveEmail(this.value)" 
                     value="${model.viewState.email}" 
                     placeholder="epost adresse">
             </label>
@@ -17,14 +17,14 @@ function updateView() {
             <label>
                 Passord:<br>
                 <input type="password" 
-                    oninput="model.viewState.password=this.value" 
+                    onchange="SavePassword(this.value)" 
                     value="${model.viewState.password}" 
                     placeholder="passord">
             </label>
             <br>
             <button onclick="checkMailAndPassword()">Log inn</button>
             <button onclick="goToRegister()">Opprett bruker</button><br>
-            <h2 id="Wrong"></h2>
+            <h2>${model.viewState.errorMessage}</h2>
         </div>
         `;
     }
@@ -57,6 +57,13 @@ function updateView() {
                     placeholder="passord">
             </label>
             <br><br>
+            <label>
+                Image:
+                <input type="file"
+                    oninput="model.viewState.Image=this.vaulue"
+                    value="${model.viewState.Image}">
+            </label>
+            <br>
             <button onclick="registerUser()">Registrer</button>
             <button onclick="goHome()">Tilbake</button>
             <h2 id="Wrong"></h2>
@@ -65,12 +72,7 @@ function updateView() {
     }
 
     else if (currentPage === 'welcomePage') {
-        appDiv.innerHTML = /*HTML*/ `
-        <div id="centerMydiv">
-            <h1>Velkommen, ${model.viewState.name}!</h1>
-            <button onclick="logout()">Logg ut</button>
-        </div>
-        `;
+        appDiv.innerHTML = welcomeView()
     }
 }
 

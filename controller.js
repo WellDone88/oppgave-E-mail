@@ -1,6 +1,6 @@
 function checkMailAndPassword() {
-    const email = model.viewState.email.trim();
-    const password = model.viewState.password.trim();
+    const email = model.viewState.email;
+    const password = model.viewState.password;
     const messageDiv = document.getElementById('Wrong');
 
     const user = model.data.EmailAndPasswords.find(u => u.email === email && u.password === password);
@@ -10,7 +10,7 @@ function checkMailAndPassword() {
         model.app.currentPage = 'welcomePage';
         updateView();
     } else {
-        messageDiv.innerText = "Feil e-post eller passord!";
+        logInErrorMessage("Feil e-post eller passord!")
     }
 }
 
@@ -30,27 +30,24 @@ function goHome() {
 }
 
 function registerUser() {
-    const name = model.viewState.name.trim();
-    const email = model.viewState.email.trim();
-    const password = model.viewState.password.trim();
-    const messageDiv = document.getElementById('Wrong');
+    const name = model.viewState.name;
+    const email = model.viewState.email;
+    const password = model.viewState.password;
 
     if (!email || !password) {
-        messageDiv.innerText = "Vennligst fyll ut alle feltene.";
-        return;
+        logInErrorMessage("Vennligst fyll ut alle feltene.")
     }
 
     const exists = model.data.EmailAndPasswords.some(u => u.email === email);
     if (exists) {
-        messageDiv.innerText = "Denne e-posten er allerede registrert.";
-        return;
+        logInErrorMessage("Denne e-posten er allerede registrert.")
     }
 
     model.data.EmailAndPasswords.push({ name, email, password });
-    messageDiv.innerText = "Bruker opprettet! Du kan nå logge inn.";
     model.viewState.name = '';
     model.viewState.email = '';
     model.viewState.password = '';
+    logInErrorMessage( "Bruker opprettet! Du kan nå logge inn.")
 }
 
 function logout() {
@@ -59,4 +56,16 @@ function logout() {
     model.viewState.email = '';
     model.viewState.password = '';
     updateView();
+}
+
+
+
+function SaveEmail(Email){
+    model.viewState.email = Email
+
+
+}
+
+function SavePassword(Password){
+    model.viewState.password = Password
 }

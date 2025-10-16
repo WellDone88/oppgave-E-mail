@@ -1,6 +1,7 @@
 const model = {
     app:{
         currentPage: 'homePage',
+        pages: ['homePage', 'LoginPage']
 
     },
 
@@ -9,14 +10,16 @@ const model = {
         name: '',
         email: '',
         password: '',
+        Image: '',
+        errorMessage: '',
 
     },
     
     data:{
     EmailAndPasswords:[
-        {name: 'Admin', email:'admin@gmail.com', password:'password'},
-        {name: 'Martin', email: 'martin@gmail.com', password:'tikaMasala4life'},
-        {name: 'Rebecka', email:'rebecka@mail.com', password:'skyrim123'},
+        {name: 'Admin', email:'admin@pmail.com', password:'password'},
+        {name: 'Martin', email: 'martin@pmail.com', password:'tikaMasala4life'},
+        {name: 'Rebecka', email:'rebecka@pmail.com', password:'skyrim123'},
 
     ],
     }
@@ -29,5 +32,3 @@ const model = {
 
 
 };
-
-window.onload = () => updateView();
